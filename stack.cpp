@@ -57,6 +57,12 @@ public:
     {
         return a1.counter();
     }
+    
+//function to display the topelement    
+    void topdisplay()
+    {
+        cout<<top->data<<endl;
+    }
 };
 
 
@@ -76,6 +82,7 @@ int main()
     admissions.disp();
     admissions.pop();
     admissions.disp();
+    admissions.topdisplay();
     if(admissions.emptyornot()==1)
     {
         cout<<" The stack is empty "<<endl;
