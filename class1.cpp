@@ -1,5 +1,7 @@
 
 
+
+
 #include<iostream>
 using namespace std;
 
@@ -80,25 +82,28 @@ class linkedlist
        cout<<" NULL "<<endl;
 
    }
-    //insert at
-     void InsertAt(int pos, int val){
+    //insertat
+     void insertat(int val, int pos)
+     {
         //create a new node
         Node*temp = new Node;
         temp->data = val;
-        if(pos==1){
+        if(pos==1)
+        {
             head = temp;
             tail = temp;
-
         }
 
-        else{
-        //counter should be at last element
+        else
+        {
+              //counter should be at last element
               Node* current = head;
               int i=1;
-            while(i<pos-1){
-                    i++;
-                current = current->next;
-            }
+              while(i<pos-1)
+              {
+                   i++;
+                   current = current->next;
+              }
             temp->next = current->next;
             current->next=temp;
         }
@@ -124,7 +129,7 @@ class linkedlist
     l1.insert(2);
     l1.insert(3);
     l1.insert(4);
-    l1.InsertAt(4,1);
+    l1.insertat(4,1);
     l1.display();
     l1.delet();
     l1.display();
